@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+stack<int> myStack;
+// Push two numbers
+myStack.push(100);
+cout << "Pushed: 100" << endl;
+myStack.push(200);
+cout << "Pushed: 200" << endl;
+// Pop two numbers
+if (!myStack.empty()) {
+cout << "Top before pop: " << myStack.top() << endl;
+myStack.pop();
+cout << "Popped one element." << endl;
+}
+if (!myStack.empty()) {
+cout << "Top before pop: " << myStack.top() << endl;
+myStack.pop();
+cout << "Popped another element." << endl;
+}
+// Stack should now be empty
+if (myStack.empty()) {
+cout << "Stack is now empty." << endl;
+}
+return 0;
+}
