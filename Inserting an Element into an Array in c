@@ -1,0 +1,22 @@
+#include <stdio.h>
+void insertAtPosition(int arr[], int size, int pos, int value)
+{
+for (int i = size; i > pos; i--)
+{
+arr[i] = arr[i - 1];
+}
+arr[pos] = value;
+printf("Array after insertion: ");
+for (int i = 0; i <= size; i++) { // Note: size + 1 elements after insertion
+printf("%d ", arr[i]);
+}
+printf("\n");
+}
+int main() {
+int arr[10] = {10, 7, 9, 2, 5}; // Initial array with space for 10 elements
+int size = 5;                   // Current number of elements
+int pos = 3;                    // Position to insert the value (0-based)
+int value = 15;                 // Value to insert
+insertAtPosition(arr, size, pos, value);
+return;
+}
