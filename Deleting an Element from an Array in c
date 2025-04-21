@@ -1,0 +1,18 @@
+#include <stdio.h>
+void deleteAtPosition(int arr[], int size, int pos) {
+for (int i = pos; i < size - 1; i++) {
+arr[i] = arr[i + 1];
+}
+printf("Array after deletion: ");
+for (int i = 0; i < size - 1; i++) { // Array size decreases by 1 after deletion
+printf("%d ", arr[i]);
+}
+printf("\n");
+}
+int main() {
+int arr[] = {10, 7, 9, 15, 2, 5}; // Initial array
+int size = 6;                    // Current number of elements
+int pos = 3;                     // Position to delete (0-based index)
+deleteAtPosition(arr, size, pos);
+return 0;
+}
