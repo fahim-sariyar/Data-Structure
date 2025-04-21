@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+stack<int> myStack;
+// Push elements
+myStack.push(10);
+myStack.push(20);
+myStack.push(30);
+cout << "Top element: " << myStack.top() << endl; // Outputs 30
+// Pop an element
+myStack.pop();
+cout << "Top after pop: " << myStack.top() << endl; // Outputs 20
+myStack.pop();
+cout << "Top after pop: " << myStack.top() << endl; //Outputs 10
+return 0;
+}
