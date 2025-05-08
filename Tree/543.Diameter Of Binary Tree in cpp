@@ -1,0 +1,16 @@
+class Solution {
+private:
+    int maxDiameter = 0;
+    int dfs(TreeNode* node) {
+        if (!node) return 0;
+        int leftDepth = dfs(node->left);
+        int rightDepth = dfs(node->right);
+        maxDiameter = max(maxDiameter, leftDepth + rightDepth);
+        return 1 + max(leftDepth, rightDepth);
+    }
+public:
+    int diameterOfBinaryTree(TreeNode* root) {
+        dfs(root);
+        return maxDiameter;
+    }
+};
